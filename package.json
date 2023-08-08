@@ -1,0 +1,51 @@
+{
+  "name": "auto-scroll-table",
+  "version": "1.0.0",
+  "description": "自动滚动的表格",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config config/webpack.dev.config.js",
+    "build": "webpack --config config/webpack.prod.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mengliuliu/auto-scroll-table.git"
+  },
+  "keywords": [
+    "自动、滚动、表格"
+  ],
+  "author": "mengliu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mengliuliu/auto-scroll-table/issues"
+  },
+  "homepage": "https://github.com/mengliuliu/auto-scroll-table#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@types/react": "^18.2.19",
+    "@types/react-dom": "^18.2.7",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss": "^8.4.27",
+    "postcss-loader": "^7.3.3",
+    "postcss-preset-env": "^9.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "webpack-merge": "^5.9.0"
+  },
+  "dependencies": {
+    "antd": "^5.8.2"
+  }
+}
