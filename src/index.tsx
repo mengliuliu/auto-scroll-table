@@ -1,18 +1,23 @@
 import React, { useEffect, useRef, useState } from "react"
-// import './index.scss'
 import { Spin } from "antd"
+import "./index.scss"
+
 interface IProps {
+  config?: {
+    bgColor: string
+    height: string
+  }
   columns: any[]
   dataSource: any[]
 }
 
 function AutoScrollTable(props: IProps) {
-  const { columns, dataSource } = props
+  const { config, columns, dataSource } = props
   /** 是否滚动 */
   const [isScrolle, setIsScrolle] = useState(true)
 
   /** 滚动速度，值越小，滚动越快 */
-  const speed = 100
+  const speed = 1000
 
   const warper: any = useRef<HTMLDivElement>(null)
   /** 原数据 */
@@ -21,13 +26,13 @@ function AutoScrollTable(props: IProps) {
   const childDom2: any = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // 判断是否需要滚动
-    if (isScrolle && dataSource.length) {
+    // 初始判断是否需要滚动
+    if (dataSource.length) {
       const scroll =
         warper.current.clientHeight < childDom1.current.clientHeight
       setIsScrolle(scroll)
     }
-  }, [dataSource])
+  }, [])
 
   //开始滚动
   useEffect(() => {
@@ -51,18 +56,30 @@ function AutoScrollTable(props: IProps) {
   }, [isScrolle, dataSource])
 
   return (
-    <>
-      <div className={"tableStyle"}>
+    <div
+      style={{
+        backgroundColor: config?.bgColor,
+      }}
+    >
+      {/* 表格标题 */}
+      <div className={"table"}>
         {columns?.map((item, index) => {
           return <div>{item.title}</div>
         })}
       </div>
+      {/* 表格内容 */}
       <Spin spinning={dataSource.length ? false : true}>
-        <div className={"parent"} ref={warper}>
+        <div
+          className={"parent"}
+          style={{
+            height: config?.height + "px",
+          }}
+          ref={warper}
+        >
           <div className={"child"} ref={childDom1}>
             {dataSource?.map((item, index) => {
               return (
-                <div className={"tableStyle"} key={index}>
+                <div className={"table"} key={index}>
                   {columns.map((column, indey) => {
                     return (
                       <div>
@@ -83,7 +100,7 @@ function AutoScrollTable(props: IProps) {
           ></div>
         </div>
       </Spin>
-    </>
+    </div>
   )
 }
 

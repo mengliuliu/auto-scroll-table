@@ -1,0 +1,2 @@
+.parent{width:100%;overflow-y:scroll;scrollbar-width:none;-ms-overflow-style:none}.parent::-webkit-scrollbar{display:none}.child{height:auto}.child>div:nth-child(2n+1){background:rgba(59,208,237,0.16)}.table{display:flex;justify-content:space-between;align-items:center}.table>div{flex:1;font-size:12px;padding:10px;min-height:40px;color:white;height:100%;display:flex;align-items:center;justify-content:center;word-break:break-all}
+

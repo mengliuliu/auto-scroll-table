@@ -1,8 +1,7 @@
 import React from "react"
 import { createRoot } from "react-dom/client"
-import AutoScrollTable from "../../src/index" // 引入组件
-// import "./index.scss"
-// import WidthAutoLabel from 'react-text-width-auto';
+// import AutoScrollTable from "../../src/index" // 引入组件
+import AutoScrollTable from "auto-scroll-table" // 引入组件
 
 const columns = [
   {
@@ -771,6 +770,10 @@ const App = () => {
   return (
     <div className="container">
       <AutoScrollTable
+        config={{
+          bgColor: "red",
+          height: "500",
+        }}
         columns={columns}
         dataSource={dataSource}
       ></AutoScrollTable>

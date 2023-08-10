@@ -1,13 +1,13 @@
 .parent {
   width: 100%;
-  height: calc(100vh - 195px);
-  margin-top: 15px;
+  // height: 500px;
   overflow-y: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
   &::-webkit-scrollbar {
     display: none;
   }
+  // background-color: #6661a4;
 }
 
 .child {
@@ -16,10 +16,11 @@
     background: rgba(59, 208, 237, 0.16);
   }
 }
-.tableStyle {
+.table {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  // background-color: #6661a4;
   > div {
     flex: 1;
     font-size: 12px;

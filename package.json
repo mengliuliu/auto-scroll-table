@@ -2,7 +2,7 @@
   "name": "auto-scroll-table",
   "version": "1.0.0",
   "description": "自动滚动的表格",
-  "main": "index.js",
+  "main": "/src/index.tsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server --config config/webpack.dev.config.js",
@@ -32,6 +32,7 @@
     "babel-loader": "^9.1.3",
     "css-loader": "^6.8.1",
     "mini-css-extract-plugin": "^2.7.6",
+    "node-sass": "^9.0.0",
     "postcss": "^8.4.27",
     "postcss-loader": "^7.3.3",
     "postcss-preset-env": "^9.1.1",
